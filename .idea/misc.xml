@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/java_commons_httpClient/pom.xml" />
+        <option value="$PROJECT_DIR$/hibernate/pom.xml" />
+        <option value="$PROJECT_DIR$/EhCache/pom.xml" />
+        <option value="$PROJECT_DIR$/spring/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringMVC/pom.xml" />
+        <option value="$PROJECT_DIR$/StrutsMVN/pom.xml" />
+        <option value="$PROJECT_DIR$/StrutsMVC/pom.xml" />
+        <option value="$PROJECT_DIR$/JMS/pom.xml" />
+        <option value="$PROJECT_DIR$/DesignPatterns/pom.xml" />
+        <option value="$PROJECT_DIR$/LogAnalyzer/pom.xml" />
+        <option value="$PROJECT_DIR$/CollectionsAPI/pom.xml" />
+        <option value="$PROJECT_DIR$/Test/pom.xml" />
+        <option value="$PROJECT_DIR$/JavaCryptography/pom.xml" />
+        <option value="$PROJECT_DIR$/jmx_test/pom.xml" />
+        <option value="$PROJECT_DIR$/kafka/pom.xml" />
+        <option value="$PROJECT_DIR$/Log4j_1.x_test/pom.xml" />
+        <option value="$PROJECT_DIR$/Threading/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/StrutsMVN/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectKey">
+    <option name="state" value="project://e2804f05-5315-4fc6-a121-c522a6c26470" />
+  </component>
+  <component name="ProjectResources">
+    <resource url="http://java.sun.com/dtd/web-app_2_3.dtd" location="$PROJECT_DIR$" />
+    <resource url="https://www.springframework.org/dtd/spring-beans-2.0.dtd" location="$USER_HOME$/.IdeaIC2019.3/system/extResources/37fb0db9_spring-beans-2.0.dtd" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

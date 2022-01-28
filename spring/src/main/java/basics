@@ -1,0 +1,58 @@
+1. Spring IOC
+2. Spring MVC
+3. Spring ORM
+4. Spring AOP
+5. Spring Services (Transaction, Security, JMS, Quartz)
+
+
+https://www.youtube.com/watch?v=fwdOb1pWGF0&list=PLd3UqWTnYXOmpGjkPiaLZsVw6JYw18vMT&index=3&ab_channel=DurgaSoftwareSolutions
+Chapter 1:
+What is spring developer name ? Rod Johnson
+What is spring's original name ? Interface 21
+Company ? Pivotal Organization (parent hierarchy includes Dell)
+Came as alternative to EJBs (they are heavy weight, need application server, costly)
+proc1 Idea: Decouple different layers of application
+Implemented mostly using: RTP (run time polymorphism and association)
+
+Chapter 2:
+1. This video talks about how association is recommended by Spring over inheritance. Gives example of Servlet(I), HttpServlet(abstract C),
+ GenericServlet(abstract class). This is tight dependency as we need these classes to implement any servlet.
+
+class D {
+ A a = new B();
+}
+
+interface A {}
+
+B implements A{}
+
+can we pass B class at runtime? Sure mention that in xml time which will be read at runtime.
+
+Spring provides IOC containers that lets you do this ...
+There are two types of IOC containers.
+1. Core Container (BeanFactory (I))
+2. Bean Container (ApplicationContext (I))
+
+There is one more container in Spring MVC (WebApplicationContext(I)).
+
+What is a container?
+It provides capabilities. to do what?
+1. Read xml file.
+2. manage lifecycles (of POJOs)
+3. dynamic inputs at runtime (this is what the Dependency Injection concept in Spring)
+
+DI is the main concept in Spring
+
+-----------------------Chapter 3 ---------------------------
+1. How to start these containers ? For tomcat, we had some startup, stop scripts, buttons etc.
+Here, we need to initialize few classes.
+BeanFactory(I) --> XMLBeanFactory(C)
+ApplicationContext(I) --> ConfigurableApplicationContext(I) --> ClassPathXMLApplicationContext(C)
+WebApplicationContext(I) --> WebApplicationContextUtils(Factory to create some concrete impl of WebApplicationContext)
+
+Create these classes under main method or servlet init methods.
+
+-----------------------Chapter 4 ---------------------------
+-----------------------Chapter 5 ---------------------------
+-----------------------Chapter 6 ---------------------------
+-----------------------Chapter 7 ---------------------------

@@ -1,0 +1,30 @@
+AutoWiring:
+
+Aim: For Automatic DI
+
+Limitation: Only for Secondary types
+
+autowire =  "by type"     --> Setter DI
+            "by Name"     --> Setter DI
+            "Constructor" --> Constuctor DI
+            "autodetect"  --> Setter/Constructor DI
+            "no"
+
+<bean id="b1" class"B1" autowire="byType" />
+<bean id="d1" class"D1" autowire="byType" />
+.
+.
+.
+.
+
+OR
+<beans default-autowire="byType">
+
+<bean id="" class="" autowire-candidate="true/false"/>  default value of attribute is true
+
+byName means that it will try to search bean of sameType and then reference names should match field-Name.
+
+constructor --> internallt it will use byType. So to solve ambiguity, we need to use autowire-candidate on bean.
+
+autodetect: setter/constructor. uses byType internally.
+default constructor is given a priority. Then parameterised constructor.

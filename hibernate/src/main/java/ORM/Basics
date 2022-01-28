@@ -1,0 +1,11 @@
+In hibernate, what if there are relationships between objects ? How are the tables going to form in that case ?
+Hibernate supports
+1) Inheritance (Is a)
+    a) Table per class
+    b) table per concrete class
+    c) table per subclass
+2) Association (Has a)
+    a) many to many
+    b) many to one
+    c) one to many
+    d) one to one

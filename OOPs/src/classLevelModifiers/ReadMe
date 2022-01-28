@@ -1,0 +1,10 @@
+1. For top level classes, how many modifiers are allowed ? public, default, abstract, final, strictfp
+2. For inner classes, apart from the ones mentioned above, private, protected, static
+3. Abstract modifiers applicable for class and methods only.
+4.
+5.
+6.
+7.
+8.
+9.
+

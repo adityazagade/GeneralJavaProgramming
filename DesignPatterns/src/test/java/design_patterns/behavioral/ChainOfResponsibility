@@ -1,0 +1,79 @@
+1. WHAT IS CHAIN OF RESPONSIBILITY?
+
+We need to avoid coupling
+(a) the code which sends the request
+to
+(b) the code which handles that request
+
+Typically the code which wants some request handled
+calls
+the exact method on an exact object to process it, this the tight coupling.
+
+Chain of responsibility solves the problem by giving more than one object, change to process the request.
+
+We create objects which are chained together by one object knowing reference of object which in next in chain.
+We give requests to first object in chain, if it can't handle that it simply passes the request down the chain.
+
+2. IMPLEMENTATION:
+ a. Define handler interface/abstract class
+ b. handler must define a method to accept incoming request.
+ c. Handler can define method to access successor in chain. If its an abstract class then we can even
+    maintain successor.
+ d. Implement handler in one or more concrete handlers. Concrete handler should check if it can handler the request.
+    If not then it should pass request to next handler.
+ e. We have to create our chain of objects next. We can do it in client. Typically in real world, this job will be done
+    by some framework or initialization code written by you.
+
+3. IMPLEMENTATION CONSIDERATIONS:
+ a. Prefer defining handler as interface as it allows you to implement chain of responsibility without worrying
+    about a single inheritance rule of java.
+ b. Handlers can allow the request to propogate even if they handle the request. Servlet filter chains allow request to
+    flow to next filter even if they perform some action on request.
+ c. Chain can be described using XML or json as well so that you can add or remove handlers from chain without modifying
+    the code.
+
+4. DESIGN CONSIDERATIONS:
+    a. Sometimes you can think of an existing connection or chain of objects. For example if you are using composite
+       pattern you already have a chain which can be used to implement this behavior.
+
+EXAMPLES:
+servlet filters ..
+
+so,
+..if the handler cant handle the request, it will pass it on to next handler.
+..there is no guarantee that the request will be handled by at least one handler.
+..We don't track which handler handled the request and cant reverse the actions of handler.
+
+Pitfalls:
+no guarantee that request will be handled.
+easy to mis-configure the chain we are connecting successors.
+
+
+
+------------------- JAVA-DESIGN-PATTERNS -------------------
+Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request.
+Chain the receiving objects and pass the request along the chain until an object handles it.
+
+Explanation:
+The Orc King gives loud orders to his army.
+The closest one to react is the commander, then officer and then soldier.
+The commander, officer and soldier here form a chain of responsibility.
+
+In plain words
+It helps to build a chain of objects.
+A request enters from one end and keeps going from an object to another until it finds a suitable handler.
+
+Wikipedia says
+In object-oriented design, the chain-of-responsibility pattern is a design pattern consisting of
+a source of command objects
+and
+a series of processing objects.
+Each processing object contains logic that defines the types of command objects that it can handle;
+the rest are passed to the next processing object in the chain.
+
+Applicability
+Use Chain of Responsibility when
+
+More than one object may handle a request, and the handler isn't known a priori. The handler should be ascertained automatically.
+You want to issue a request to one of several objects without specifying the receiver explicitly.
+The set of objects that can handle a request should be specified dynamically.

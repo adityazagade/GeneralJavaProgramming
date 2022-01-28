@@ -1,0 +1,21 @@
+CRUD
+
+read:
+  get(Entity.class, pk) : Object    // eager
+                                    // null if object with pk does not exists
+  load(Entity.class, pk) : Object   // lazy
+                                    // no object found exceptions
+
+create :
+1) save : primaryKey ( Serializable )
+2) persist : void
+3) saveOrUpdate : void
+
+Update:
+1) update : void() // only non-primary key columns we can update. And complete record you will have to update. Not possible to update one column
+                    // will throw duplicateObjectExceptions if you try to update an object that is already in session.
+2) merge : void()
+3) saveOrUpdate
+
+Delete:
+1) delete

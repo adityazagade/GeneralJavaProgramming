@@ -1,0 +1,4 @@
+so,
+..with command there is no passing on of request. Command handles the request itself.
+..with command pattern it is assured that command will be executed and request will be handled.
+..commands are trackable. We can store the command instances in same order as they execute and they are reversible in nature.

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CodeChef/CodeChef.iml" filepath="$PROJECT_DIR$/CodeChef/CodeChef.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CollectionsAPI/CollectionsAPI.iml" filepath="$PROJECT_DIR$/CollectionsAPI/CollectionsAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DesignPatterns/DesignPatterns.iml" filepath="$PROJECT_DIR$/DesignPatterns/DesignPatterns.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EhCache/EhCache.iml" filepath="$PROJECT_DIR$/EhCache/EhCache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FileDescriptorCheck/FileDescriptorCheck.iml" filepath="$PROJECT_DIR$/FileDescriptorCheck/FileDescriptorCheck.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GeneralJavaProgramming.iml" filepath="$PROJECT_DIR$/GeneralJavaProgramming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVAIO/JAVAIO.iml" filepath="$PROJECT_DIR$/JAVAIO/JAVAIO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JMS/JMS.iml" filepath="$PROJECT_DIR$/JMS/JMS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaCryptography/JavaCryptography.iml" filepath="$PROJECT_DIR$/JavaCryptography/JavaCryptography.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Log4j_1.x_test/Log4j_1.x_test.iml" filepath="$PROJECT_DIR$/Log4j_1.x_test/Log4j_1.x_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LogAnalyzer/LogAnalyzer.iml" filepath="$PROJECT_DIR$/LogAnalyzer/LogAnalyzer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOPs/OOPs.iml" filepath="$PROJECT_DIR$/OOPs/OOPs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SideCar/SideCar.iml" filepath="$PROJECT_DIR$/SideCar/SideCar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVC/SpringMVC.iml" filepath="$PROJECT_DIR$/SpringMVC/SpringMVC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StrutsMVC/StrutsMVC.iml" filepath="$PROJECT_DIR$/StrutsMVC/StrutsMVC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Test/Test.iml" filepath="$PROJECT_DIR$/Test/Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Threading/Threading.iml" filepath="$PROJECT_DIR$/Threading/Threading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StrutsMVN/ear/ear.iml" filepath="$PROJECT_DIR$/StrutsMVN/ear/ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StrutsMVN/ejbs/ejbs.iml" filepath="$PROJECT_DIR$/StrutsMVN/ejbs/ejbs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate/hibernate.iml" filepath="$PROJECT_DIR$/hibernate/hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_commons_httpClient/java_commons_httpClient.iml" filepath="$PROJECT_DIR$/java_commons_httpClient/java_commons_httpClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_http_client/java_http_client.iml" filepath="$PROJECT_DIR$/java_http_client/java_http_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jmx_test/jmx_test.iml" filepath="$PROJECT_DIR$/jmx_test/jmx_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kafka/kafka.iml" filepath="$PROJECT_DIR$/kafka/kafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StrutsMVN/projects/logging/logging.iml" filepath="$PROJECT_DIR$/StrutsMVN/projects/logging/logging.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StrutsMVN/primary-source/primary-source.iml" filepath="$PROJECT_DIR$/StrutsMVN/primary-source/primary-source.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StrutsMVN/projects/projects.iml" filepath="$PROJECT_DIR$/StrutsMVN/projects/projects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StrutsMVN/servlets/servlet/servlet.iml" filepath="$PROJECT_DIR$/StrutsMVN/servlets/servlet/servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StrutsMVN/servlets/servlets.iml" filepath="$PROJECT_DIR$/StrutsMVN/servlets/servlets.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring/spring.iml" filepath="$PROJECT_DIR$/spring/spring.iml" />
+    </modules>
+  </component>
+</project>

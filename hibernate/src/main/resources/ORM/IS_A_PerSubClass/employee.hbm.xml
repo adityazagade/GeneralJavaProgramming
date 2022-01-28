@@ -1,0 +1,20 @@
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
+    <class name="ORM.beans.Employee" table="employee007">
+        <id name="id"/>
+        <property name="name"/>
+        <property name="email"/>
+        <property name="salary"/>
+        <joined-subclass table="semployee" name="ORM.beans.SEmployee">
+            <key column="id"/>
+            <property name="tool"/>
+        </joined-subclass>
+        <joined-subclass table="hemployee" name="ORM.beans.HEmployee">
+            <key column="id"/>
+            <property name="wh"/>
+        </joined-subclass>
+        <joined-subclass table="adminEmp" name="ORM.beans.Admin">
+            <key column="id"/>
+            <property name="branchName"/>
+        </joined-subclass>
+    </class>
+</hibernate-mapping>

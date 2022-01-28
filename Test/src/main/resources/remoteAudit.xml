@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="convertor.xsd"?>
+
+<RemoteAudits version="1.0" sessionId="7b0156b0-1b49-4e01-8e82-4e163beb5f82" foreign-name="http://localhost:8080">
+    <Audits>
+        <SessionInfo type="16">1614699415218</SessionInfo>
+        <SessionInfo type="17">1614699527545</SessionInfo>
+        <SessionInfo type="23">1</SessionInfo>
+        <SessionInfo type="9">127.0.0.1</SessionInfo>
+        <SessionInfo type="15">127.0.0.1</SessionInfo>
+    </Audits>
+</RemoteAudits>

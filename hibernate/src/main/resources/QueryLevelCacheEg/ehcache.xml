@@ -1,0 +1,8 @@
+<ehcache updateCheck="false">
+    <defaultCache
+            maxElementsInMemory="1000"
+            eternal="false"
+            timeToLiveSeconds="120"
+            overflowToDisk="false">
+    </defaultCache>
+</ehcache>

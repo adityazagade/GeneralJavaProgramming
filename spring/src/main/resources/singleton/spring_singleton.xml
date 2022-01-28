@@ -1,0 +1,6 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <bean class="beans.singleton.Test" id="t" factory-method="getTest"/>
+    <bean class="java.util.Calendar" id="c" factory-method="getInstance"/>
+</beans>

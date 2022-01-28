@@ -1,0 +1,4 @@
+//Object States
+1. transient
+2. detached
+3  persistent

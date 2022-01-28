@@ -1,0 +1,12 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <bean id="Car" class="beans.setterDI.Car">
+        <property name="carName" value="carName"/>
+        <property name="e">
+            <bean class="beans.setterDI.Engine">
+                <property name="engineName" value="engineName"/>
+            </bean>
+        </property>
+    </bean>
+</beans>

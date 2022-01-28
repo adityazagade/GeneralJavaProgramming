@@ -1,0 +1,2 @@
+@Required on setters
+RequiredAnnotationBeanPostProcessor Class instantiation is mandatory

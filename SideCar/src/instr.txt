@@ -1,0 +1,33 @@
+Extract the zip file and go inside the extracted location. 
+You should see lib folder and SideCarApp.groovy
+
+Edit line 10-19 of the SideCarApp.groovy script. 
+
+# url of the platform
+ server_host = "http(s)://<host>:<port>"
+
+# username/password to authenticate all the requests made to platform
+ server_uname = "admin";
+ server_upass = "admin";
+
+# device with which the remote session is established
+  device_name = "Questra-Aditya"	
+
+# put interface_name
+  interface_name = "VNC"			
+
+# the state you are looking for
+  state = "AVAILABLE"			
+
+# number of requests to be made to the server. These requests will be made to any node at random 
+ numberOfRequestsFind = 100			
+ numberOfRequestsEhCacheSync = 10
+
+Once you have supplied the required values, then you can start the script
+
+1. To run the groovy script to make rest calls to /findOne 
+   groovy -cp ./libs/* SideCarApp.groovy doFindOne
+   
+2. To test EhCache sync
+   groovy -cp ./libs/* SideCarApp.groovy testEhCacheSync
+ 

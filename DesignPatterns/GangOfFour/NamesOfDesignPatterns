@@ -1,0 +1,35 @@
+We classify design patterns by two criteria. The first criterion, called purpose
+
+Patterns can have either creational, structural, or behavioral purpose
+The second criterion, called scope, specifies whether the pattern applies primarily to classes or to objects
+
+Creational (Creational patterns concern the process of object creation)
+1. Factory (Class scope)
+2. Builder
+3. AbstractFactory
+4. Singleton
+5. Object Pool (not in GOF?)
+6. Prototype
+
+Structural (Structural patterns deal with the composition of classes or objects)
+1. Decorator
+2. Adapter (Class)
+3. Adapter (Object)
+3. Bridge
+4. Composite
+5. Facade
+6. Flyweight
+7. Proxy
+
+Behavioral (Behavioral patterns characterize the ways in which classes or objects interact and distribute responsibility)
+1. Interpreter (Class)
+2. Template Method (Class)
+3. Observer
+4. Chain of responsibility
+5. Command
+6. Iterator
+7. Mediator
+8. Memento
+9. State
+10. Strategy
+11. Visitor

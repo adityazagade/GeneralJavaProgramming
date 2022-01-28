@@ -1,0 +1,19 @@
+hbm2ddl.auto =  {create, update, validate, create-drop};
+create: session.buildSessionFactory() is the call which will create tables ;
+        drop existing tables;
+        create fresh new tables
+
+update: 1. if any tables required, create
+        2. if any tables required alters, it will do alter operations
+
+validate: check mapping file schema against table schema.
+            Tables can have more columns than mapping schema.
+            But table needs to have all the columns present in mapping schema.
+            i.e.
+            mapping column = table column
+            mapping column count <= table column count
+
+create-drop: drop, then create, then drop
+            drop table if exists
+            create new table
+            drop existing table --> called when you call sessionFactory.close();

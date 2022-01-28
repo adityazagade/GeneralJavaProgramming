@@ -1,0 +1,7 @@
+You can do pagination using HQL or Criteria
+
+query.setFirstResult()
+query.setLastResult()
+
+criteria.setFirstResult();
+criteria.setLastResult();

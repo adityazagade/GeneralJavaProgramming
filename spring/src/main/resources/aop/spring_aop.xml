@@ -1,0 +1,44 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <bean class="aop.Bank" id="sbi">
+        <property name="name" value="sbi"/>
+        <property name="accounts">
+            <list>
+                <ref bean="a1"/>
+                <ref bean="a2"/>
+                <ref bean="a3"/>
+            </list>
+        </property>
+    </bean>
+    <bean id="a1" class="aop.Account">
+        <property name="accountNo" value="SBIN001"/>
+        <property name="balance" value="0"/>
+    </bean>
+    <bean id="a2" class="aop.Account">
+        <property name="accountNo" value="SBIN002"/>
+        <property name="balance" value="1000"/>
+    </bean>
+    <bean id="a3" class="aop.Account">
+        <property name="accountNo" value="SBIN003"/>
+        <property name="balance" value="500"/>
+    </bean>
+
+    <bean class="aop.service.BankLoggerService" id="bls"/>
+    <bean class="aop.service.BankTransaction" id="bt"/>
+    <bean class="aop.service.BankPostProcess" id="bpp"/>
+    <bean class="aop.service.BankServiceErrors" id="bse"/>
+
+    <bean class="org.springframework.aop.framework.ProxyFactoryBean" id="bankProxy">
+        <property name="target" ref="sbi"/>
+        <property name="interceptorNames">
+            <list>
+                <value>bls</value>
+                <value>bt</value>
+                <value>bpp</value>
+                <value>bse</value>
+            </list>
+        </property>
+    </bean>
+
+</beans>

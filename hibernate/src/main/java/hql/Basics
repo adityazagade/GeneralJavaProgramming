@@ -1,0 +1,34 @@
+Hibernate Query Language
+
+You can perform CRUD operations
+1. Insert
+2. Update
+3. Delete
+4. Select
+
+
+
+HQL vs SQL
+
+    HQL                                              SQL
+ 1. Hibernate                                   Database
+ 2. Database Independant                        Database dependant
+ 3. HQL queries are Object queries              SQL queries are Table queries
+
+
+ Insert
+
+1. YOu cannot add a user input data into the table.
+2. You can only move one table data into another.
+
+Query q = s.createQuery(...)
+
+q.executeUpdate();  // DML operations
+q.uniqueObject();   // DRL operations
+q.list();           // DRL operations
+
+Update:
+Since Column update is also possible
+PK update also possible
+
+Select:

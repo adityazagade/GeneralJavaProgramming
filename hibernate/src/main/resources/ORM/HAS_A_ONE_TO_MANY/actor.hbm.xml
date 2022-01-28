@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="ORM.beans.Actor" table="actor">
+        <id name="id"/>
+        <property name="aName"/>
+        <set name="movies" cascade="all">
+<!--            There are multiple cascase options like save, all, only-delete etc-->
+            <key column="aid"/>
+            <one-to-many class="ORM.beans.Movie"/>
+        </set>
+    </class>
+</hibernate-mapping>

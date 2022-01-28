@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="primaryKeyGenerators.Employee" table="employee007">
+        <id name="eid">
+            <generator class="primaryKeyGenerators.custom.StudentPKGenerator"/>
+        </id>
+        <property name="ename"/>
+        <property name="email"/>
+        <property name="edept"/>
+    </class>
+</hibernate-mapping>

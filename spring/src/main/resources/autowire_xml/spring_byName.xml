@@ -1,0 +1,11 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <bean class="beans.autowiring_xml.Engine" id="engine">
+        <property name="modelYear" value="2015"/>
+    </bean>
+    <bean class="beans.autowiring_xml.Engine" id="engine1">
+        <property name="modelYear" value="2016"/>
+    </bean>
+    <bean class="beans.autowiring_xml.Car" id="c1" autowire="byName"/>
+</beans>

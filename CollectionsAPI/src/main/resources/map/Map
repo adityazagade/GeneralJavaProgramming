@@ -1,0 +1,5 @@
+Map is not a child interface of collection (I)
+If we want to represent group of objects as key-value pairs, then we should go for map.
+Both keys and values are objects only.
+Duplicate keys are not allowed, but values can be duplicated.
+each key-value pair is called entry.

@@ -1,0 +1,9 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <bean class="beans.setterDI.Student" name="student" scope="singleton">
+        <property name="name" value="Aditya Zagade"/>
+        <property name="email" value="adityazagade1@fakeemail.com"/>
+        <property name="marks" value="50"/>
+    </bean>
+</beans>

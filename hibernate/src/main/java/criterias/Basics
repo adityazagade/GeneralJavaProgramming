@@ -1,0 +1,46 @@
+Using Criterias, we can make select operations with some criterias.
+
+1) SelectAll;
+    Session s = sf.openSession();
+    Criteria c = s.createCriteria(Employee.class);
+    List<Employee> = c.list();
+    //then iterate
+
+    Restrictions class
+1.    Restrictions.eq("id",1);
+    Criteria c = s.createCriteria(Employee.class);
+    c.add(r);
+    Employee e = (Employee) c.uniqueObject();
+
+2.    Restrictions.gt("salary", 8000); ( Multiple Restricions can be added)
+    Criteria c = s.createCriteria(Employee.class);
+    c.add(r);
+    List<Employee> eList = c.list();
+    //iterate;
+
+3. Projections class ( At a time, we can only have one projections);
+    Projection p = Projections.property("name");
+    Criteria c = s.createCriteria(Employee.class);
+    c.add(p);
+    List<String> names = c.list();
+
+4. ProjectionList
+    pl = Projections.projectionList()
+    pl.add(p1);
+    pl.add(p2);
+    c.addProjectionList(pl);
+    ....
+
+5. Projections.max(id)
+c.setProjection(p)
+c.uniqueObject();
+
+
+
+    Criteria
+    |-List()
+    |-uniqueObject()
+
+
+    Restriction are for conditions
+    Projections are for aggregate functions, get particular columns.

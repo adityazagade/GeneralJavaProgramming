@@ -1,0 +1,11 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<!--<beans default-init-method="" default-destroy-method="">-->
+<beans>
+    <bean class="beans.lifecycle.Test" id="t">
+        <property name="driverName" value="oracle.jdbc.OracleDriver"/>
+        <property name="url" value="jdbc:oracle:thin:@//localhost:1521/AXEDAPDB"/>
+        <property name="userName" value="system"/>
+        <property name="password" value="Manager123"/>
+    </bean>
+</beans>

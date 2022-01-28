@@ -1,0 +1,36 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<!--        dependency-check is deprecated-->
+<beans>
+<!--    <bean id="Car" class="beans.setterDIchecking.Car" dependency-check="none">-->
+<!--    </bean>-->
+<!--    <bean id="engine" class="beans.setterDIchecking.Engine" dependency-check="none">-->
+<!--    </bean>-->
+
+<!--    <bean id="Car" class="beans.setterDIchecking.Car" dependency-check="all">-->
+<!--        <property name="carName" value="Audi"/>-->
+<!--        <property name="engine" ref="engine"/>-->
+<!--    </bean>-->
+<!--    <bean id="engine" class="beans.setterDIchecking.Engine" dependency-check="all">-->
+<!--        <property name="engineName" value="2015"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="Car" class="beans.setterDIchecking.Car" dependency-check="simple">-->
+<!--        <property name="carName" value="Audi"/>-->
+<!--&lt;!&ndash;        <property name="engine" ref="engine"/>&ndash;&gt;-->
+<!--    </bean>-->
+<!--    <bean id="engine" class="beans.setterDIchecking.Engine" dependency-check="simple">-->
+<!--        <property name="engineName" value="2015"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="Car" class="beans.setterDIchecking.Car" dependency-check="objects">-->
+<!--&lt;!&ndash;        <property name="carName" value="Audi"/>&ndash;&gt;-->
+<!--        <property name="engine" ref="engine"/>-->
+<!--    </bean>-->
+<!--    <bean id="engine" class="beans.setterDIchecking.Engine" dependency-check="simple">-->
+<!--        <property name="engineName" value="2015"/>-->
+<!--    </bean>-->
+
+</beans>
+

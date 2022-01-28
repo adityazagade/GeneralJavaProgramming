@@ -1,0 +1,26 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <bean class="beans.lookup.Car" id="c">
+        <lookup-method name="myCarEngine" bean="e1"/>
+    </bean>
+    <bean class="beans.lookup.Engine" id="e1">
+        <property name="engineName" value="HondaEngine"/>
+    </bean>
+
+    <bean class="beans.lookup.Bus" id="b">
+        <lookup-method name="myBusEngine" bean="e2"/>
+    </bean>
+    <bean class="beans.lookup.Engine" id="e2">
+        <property name="engineName" value="TataEngine"/>
+    </bean>
+
+
+    <bean class="beans.lookup.Truck" id="t">
+        <lookup-method name="myTruckEngine" bean="e3"/>
+    </bean>
+    <bean class="beans.lookup.Engine" id="e3">
+        <property name="engineName" value="BenzEngine"/>
+    </bean>
+
+</beans>

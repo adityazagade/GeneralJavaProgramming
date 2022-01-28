@@ -1,0 +1,9 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <bean class="beans.setterDI.Student" name="student" scope="singleton">
+        <constructor-arg type="int" value="25"/>
+        <constructor-arg type="String" value="adityazagade1@fakeemail.com"/>
+        <constructor-arg type="String" value="Aditya Zagade" index="0"/>
+    </bean>
+</beans>

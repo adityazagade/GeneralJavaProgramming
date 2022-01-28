@@ -1,0 +1,23 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <!--    handler-->
+    <!--    simpleUrlHandlerMapping-->
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/hello.htm">hc</prop>
+                <prop key="/hello1.htm">hc1</prop>
+            </props>
+        </property>
+    </bean>
+    <!--    controller-->
+    <!--    <bean name="/hello.htm" class="Controller.HelloController"/>-->
+    <bean id="hc" class="Controller.HelloController"/>
+    <bean id="hc1" class="Controller.HelloController1"/>
+    <!--    viewResolver-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/output/"/>
+        <property name="suffix" value=".html"/>
+    </bean>
+</beans>

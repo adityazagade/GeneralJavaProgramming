@@ -1,0 +1,4 @@
+1. There is 3 level of cache.
+Session level cache  // First level cache // Done by default. No extra configuration
+SessionFactory level cache // second level cache
+Query Level cache

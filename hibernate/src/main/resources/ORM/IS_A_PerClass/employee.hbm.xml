@@ -1,0 +1,18 @@
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
+    <class name="ORM.beans.Employee" table="employee007">
+        <id name="id"/>
+        <discriminator column="etype"/>
+        <property name="name"/>
+        <property name="email"/>
+        <property name="salary"/>
+        <subclass name="ORM.beans.SEmployee" discriminator-value="se">
+            <property name="tool"/>
+        </subclass>
+        <subclass name="ORM.beans.HEmployee" discriminator-value="he">
+            <property name="wh"/>
+        </subclass>
+        <subclass name="ORM.beans.Admin" discriminator-value="admin">
+            <property name="branchName"/>
+        </subclass>
+    </class>
+</hibernate-mapping>

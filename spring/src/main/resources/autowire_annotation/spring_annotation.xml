@@ -1,0 +1,16 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <bean class="beans.autowire_annotation.Engine" id="e1">
+        <property name="modelYear" value="2015"/>
+    </bean>
+
+    <bean class="beans.autowire_annotation.Engine" id="e2">
+        <property name="modelYear" value="2016"/>
+    </bean>
+
+    <bean class="beans.autowire_annotation.Bus" id="b1"/>
+    <bean class="beans.autowire_annotation.Car" id="c1"/>
+
+    <bean  class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+</beans>

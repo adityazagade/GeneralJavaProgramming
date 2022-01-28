@@ -1,0 +1,14 @@
+1) We can use autowire directly into the code by using annotations ..
+2) @Autowire. Internally it uses byType mechanism.
+3) @Qualifier("id") can be used further to mention the bean id.
+
+How to active autowire annotation and Qualifier annotation ? How will spring know if autowire annotation is used ? and whether it is supported to be used ?
+
+need to seta bean ..
+<bean class="AutowireAnnotationBeanPostProcessor"/>
+
+IMP: class does not need to have a setter or constructors.
+
+
+With these annotation we reduced the load of Dependency Injection. However we still need to create Beans. We can reduce that burden as well and let spring create Beans if we so
+auto-scanning and annotate class with stereotype annotations.

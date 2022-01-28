@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean class="dao.model.StudentBO_impl" id="sbo">
+        <property name="stDAO" ref="dao"/>
+    </bean>
+    <bean id="dao" class="dao.dao.StudentDAOImpl_jdbc_pool">
+        <property name="ds" ref="dataSource"/>
+    </bean>
+
+    <!-- Only use the DriverManagerDataSource class should only be used for testing purposes since it does not provide
+    pooling and will perform poorly when multiple requests for a connection are made.-->
+<!--    <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSource">-->
+<!--        <property name="username" value="${jdbc.username}"/>-->
+<!--        <property name="password" value="${jdbc.password}"/>-->
+<!--        <property name="url" value="${jdbc.url}"/>-->
+<!--        <property name="driverClassName" value="${jdbc.driverName}"/>-->
+<!--    </bean>-->
+    <bean class="org.apache.commons.dbcp2.BasicDataSource" id="dataSource">
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="driverClassName" value="${jdbc.driverName}"/>
+        <property name="maxTotal" value="10"/>
+        <property name="maxIdle" value="5000"/>
+    </bean>
+    <context:property-placeholder location="dao/pool.properties"/>
+</beans>

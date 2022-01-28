@@ -1,0 +1,30 @@
+Business --> Logger creation and destroy
+DAO --> Connecion start and end
+Controller/Servlets --> init and destroy
+
+Which Container to load into ?
+ConfigurableApplicationContext
+-at the start (init metohds are called)
+-close (destroy methods are called)
+
+POJO lifecycle can be implemented using 3 ways
+1. programmatically
+    pojo must implement  <-- InitializingBean(I)  (afterProperties)
+                         <-- DisposableBean(I)    (destroy)
+2. xml
+    POJO
+    |- myInit
+    |- myDestroy
+
+    <bean id="" class=""
+        init-method="myInit"
+        destroy-method="myDestroy"/>
+
+3. @Annotations
+    POJO
+    |@PostConstruct
+    |-myInit
+    |
+    |@preDestroy
+    |-myDestroy
+

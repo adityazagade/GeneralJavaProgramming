@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:output method="text"/>
+
+    <xsl:template match="/">
+        <xsl:text>{ "</xsl:text>
+<!--        <xsl:value-of select="name(RemoteAudits/Audits/child::node())"/>-->
+        <xsl:value-of select="name(RemoteAudits/Audits/*[1])" />
+        <xsl:text>" : </xsl:text>
+        <xsl:text>{"sessionId" : "</xsl:text>
+        <xsl:value-of select="RemoteAudits/@sessionId"/>
+        <xsl:text>", "auditRecords" : [</xsl:text>
+        <xsl:for-each select="RemoteAudits/Audits/*">
+            <xsl:text>{"type" : </xsl:text>
+            <xsl:value-of select="@type"/>
+            <xsl:text>, "value" : "</xsl:text>
+            <xsl:value-of select="current()"/>
+            <xsl:text>"}</xsl:text>
+            <xsl:if test="position() != last()">
+                <xsl:text>,</xsl:text>
+            </xsl:if>
+        </xsl:for-each>
+        <xsl:text>]}</xsl:text>
+        <xsl:text>}</xsl:text>
+    </xsl:template>
+</xsl:stylesheet>

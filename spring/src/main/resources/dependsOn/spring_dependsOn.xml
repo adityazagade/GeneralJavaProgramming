@@ -1,0 +1,11 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<!--    <bean class="beans.dependsOn.A" id="a"/>-->
+<!--    <bean class="beans.dependsOn.B" id="b"/>-->
+<!--    <bean class="beans.dependsOn.C" id="c"/>-->
+
+    <bean class="beans.dependsOn.A" id="a" depends-on="b"/>
+    <bean class="beans.dependsOn.B" id="b" depends-on="c"/>
+    <bean class="beans.dependsOn.C" id="c"/>
+</beans>

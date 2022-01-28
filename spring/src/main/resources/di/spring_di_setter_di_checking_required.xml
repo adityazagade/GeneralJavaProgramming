@@ -1,0 +1,15 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    <!--To activate required annotation, we need to instantiate a bean 'RequiredAnnotationBeanPostProcessor'-->
+    <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+    <!--    <bean class="beans.setterDI_Required.Student" id="s">-->
+    <!--&lt;!&ndash;        <property name="name" value="Aditya"/>&ndash;&gt;-->
+    <!--    </bean>-->
+
+    <bean class="beans.setterDI_Required.Student" id="s">
+        <property name="name" value="Aditya"/>
+    </bean>
+</beans>
+

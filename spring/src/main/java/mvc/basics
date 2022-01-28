@@ -1,0 +1,128 @@
+Spring - MVC
+
+What is supported ?
+1. Form backup
+2. Storing form in beans and perform Validations on it. But for this we have to use spring-tags.
+3. Controller Support (MultiAction/MultiForm Controller)
+4. Validation support
+5. Interceptor support
+6. I18N support
+7. View Resolvers
+8. Exception Handling
+
+This is for Presentation to Controller layer
+
+Remaining support provided by IOC (WebApplicationContext container)
+
+For Design of MVC framework - the recommended Architecture model is JSP-Model Architecture.
+
+
+Form1
+Student Registeration   ------------|
+                                    |                                                   |-----StudentController (Helper-Controllers)
+Form2                               |                                                   |
+Employee Registeration  ------------|----FrontController ( 1. Perform Validations       |-----EmmployeeController (Helper-Controllers)
+                                    |                      2. Read Data                 |
+Form3                               |                      3. Do Common Operations )    |-----AdminController (Helper-Controllers)
+Admin Registeration     ------------|
+
+.
+.
+.
+.
+
+IF Front Controller is JSP then architecture is
+1. JSP-Model I
+
+IF Front Controller is Servlet then architecture is  (RECOMMENDED MODEL)
+1. JSP-Model II
+
+IF Front Controller is Filter then architecture is  (RECOMMENDED MODEL)
+1. JSP-Model III
+
+IF Front Controller is TagSupport then architecture is
+1. JSP-Model IV
+If it is TagSupport, its still jsp.
+
+If it is a Model I or IV, then front controller is jsp page. and there is a change that it can be changed. Not secure.
+
+In JSP model II and III, we can hide that code.
+
+JSP Model II --> APACHE STRUTS
+JSP Model II --> SPRING
+JSP Model II --> JSF
+JSP Model III --> APACHE STRUTS 2.0
+
+
+So Spring also has a Front Controller as Servlet
+All the features that spring MVC has is put under front Controller and given to us ...
+
+So  Front-Controller servlet is used ?
+1. FrontController in Spring --> DispatcherServlet
+2. Struts 1.x --> ActionServlet
+3. Struts 2.x --> FilterDispatcher/StrutsPreparedExecuteFilter
+4. JSF --> FacesServlet
+
+---------------------------------------------------------------------------------------------------------------
+
+So we map multiple requests to same servlet
+
+<servlet>
+<servlet-name>ds</servlet-name>
+<servlet-class> className </xxx>
+
+<Servlet-mapping>
+<servlet-name>ds</servlet-name>
+<url-pattern>/registeration</url-mapping>
+<url-pattern>/login</url-mapping>
+.
+.
+.
+
+OR
+1. *.extension (RECOMMENDED FOR A MULTIPLE FRAMEWORK)
+2. /*  (RECOMMENDED FOR A SINGLE FRAMEWORK)
+3. Complete Character sequence
+
+WHAT IF WE WANT TO USE TWO FRAMEWORKS ?
+1. Spring and Struts
+
+Then we need to have two Servlets
+1. DispatcherServlet
+2. ActionServlet
+
+Map some forms to first, some to second.
+ds
+/*.ds or /*.htm (no standard extension)
+as
+/*.do  (for struts 1)
+/*.actions (for struts 2)
+
+
+Design FORM using spring-tags or html ......
+
+
+HelperController
+1.Controller (I)
+2. AbstractController
+3.AbstractCommandController
+4. SimpleFormController
+5.AbstractWizardFormController
+6. MultiActionController
+
+
+Implementing using Controller(I)
+public ModelAndView handleRequest(req,res){
+}
+
+
+
+Mapping from Dispatcher to HelperController
+
+ds-servlet.xml
+
+<bean name="/hello" class="helloController"/>
+<bean class=""InternalResourceViewResolver">
+    <property name="prefix" value="/output" />
+    <property name="suffix" value=".jsp" />
+</bean>

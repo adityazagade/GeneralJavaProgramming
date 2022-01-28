@@ -1,0 +1,25 @@
+<Item-Request model="MZ-7TE1T0BW" Supplier-Code="TOMSAM1TB">
+    <DisplayItem>
+        <Item href="SAM1TBMZ7TE1T0BW.jpg" model="MZ-7TE1T0BW">
+            <Name>Samsung SSD MZ-7TE1T0BW 1 TB 2.5 inch</Name>
+            <Price>630.99</Price>
+            <SupplierCode>TOMSAM1TB</SupplierCode>
+            <Description/>
+            <Specs>
+                <Capacity>1 TB</Capacity>
+                <Reading>540 MB/s</Reading>
+                <Writing>520 MB/s</Writing>
+                <FormFactor>2.5 "</FormFactor>
+                <Connecor>Sata III</Connecor>
+                <Size>
+                    <Width>70 mm</Width>
+                    <Height>7 mm</Height>
+                </Size>
+                <Weight>53 g</Weight>
+            </Specs>
+            <Supplier>TOM001</Supplier>
+            <SupplierName>Tom PC Hardware</SupplierName>
+            <Manufacturer>Samsung</Manufacturer>
+        </Item>
+    </DisplayItem>
+</Item-Request>

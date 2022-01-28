@@ -1,0 +1,42 @@
+There are 4 types of stereotype annotations
+1.@Controller  ---> to be used on top of Controller classes
+2.@Repository  ---> to be used on top of DAO classes
+3.@Service     ---> to be used on top of Business classes
+4.@Component   ---> to be used on top of non-MVC classes
+
+com.azagade.Controller package
+100 classes in it.
+Use @Controller on top of it.
+
+com.azagade.Service package
+100 classes in it.
+Use @Service on top of it.
+
+com.azagade.DAO package
+100 classes in it.
+Use @Repository on top of it.
+
+com.azagade.Rest package
+100 classes in it.
+Use @Component on top of it.
+
+Utility Classes, Trasaction, Security, email, we need to use @aspect, But that is not a Stereotype annotation. To be studied later.
+
+Here we will have to use schema based configuration.
+Need to use context ns.
+Then
+<Context:component-scan base-package="com.azagade.Service"/>
+<Context:component-scan base-package="com.azagade.DAO"/>
+<Context:component-scan base-package="com.azagade.Rest"/>
+<Context:component-scan base-package="com.azagade.Controller"/>
+
+<Context:annotation-config/> --> This tag will activate below annotations. No need to create beans of these xxxBeanPostProcessor
+@Required
+@Autowire
+@PostConstruct
+@PreDestroy
+
+
+// No need to have setters and constructors as well.
+
+// If the class contains even a single primitive types, then we should not create the bean using @Component. Manually create the bean inside xml file.

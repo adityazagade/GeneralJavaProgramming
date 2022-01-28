@@ -1,0 +1,31 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <bean class="beans.ArrayDI.Cars" name="cars" scope="singleton">
+        <property name="carNames">
+            <list>
+                <value>Benz</value>
+                <value>Maruti</value>
+                <value>JLR</value>
+            </list>
+        </property>
+        <property name="engines">
+            <list>
+                <ref bean="e1"/>
+                <ref bean="e2"/>
+                <ref bean="e3"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="beans.ArrayDI.Engine" id="e1">
+        <property name="modelYear" value="2013"/>
+    </bean>
+    <bean class="beans.ArrayDI.Engine" id="e2">
+        <property name="modelYear" value="2014"/>
+    </bean>
+    <bean class="beans.ArrayDI.Engine" id="e3">
+        <property name="modelYear" value="2015"/>
+    </bean>
+
+</beans>

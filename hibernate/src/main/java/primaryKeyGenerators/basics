@@ -1,0 +1,21 @@
+1. assigned (default)
+2. increment   // I think this is not thread safe ... Or will be a problem in case of cluster setup maybe.
+3. sequence ( MYSQL or DB2 does not support it. Only Oracle will support it) ;
+    starts with 1
+    increment by 1
+    no cycle
+    no caches
+
+    JNTU-seq
+    need to create a custom sequence in OracleDB.
+    create sequence  jntu_sequence
+        start With 1
+        increment by 1
+        no cycle
+        no cache
+
+4. identity (MYSQL and DB2 db support it. Oracle does not support it).. This is autoincrement in table.
+5. native internal it will used (sequence, identity, hilo)
+6. hilo
+7. foreign (ORM one to one relationships)
+8. custom generator Use identtityGenerator Class.

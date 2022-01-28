@@ -1,0 +1,80 @@
+developer: Rod Johnson
+org: spring org / pivotal
+Original Name: Interface 21
+
+Advantages of Spring:
+1. Does not depend on application server
+2. light weight and loosely coupled.
+3. Does not depend on OS APIs? Just depend on JDK libraries.
+4. Using Java Runtime PolyMorphism we can make classes loosely coupled.
+
+EJBs:
+1. are heavy weight and tightly coupled
+
+Swing:
+Depends on OS APIs
+
+Imp points:
+1. Spring recommends us to use Association instead of inheritance.
+2. For Implementing spring, they used
+    i. Runtime PolyMorphism
+    ii. Association
+3. You pass association info for class by passing them inside an XML file.
+   So parse the xml file and all, you need to have a container. That's where spring IOC container comes into picture.
+4. IOC  |-Core
+        |-J2EE
+5. (Spring) MVC, we also have WebContainer
+
+
+IOC
+|- Core
+    - proc1 Class ->  BeanFactory (I)
+|- J2EE
+    - proc1 Class ->  ApplicationContext (I)
+MVC
+|- Web
+    - proc1 Class -> WebApplicationContext (I)
+
+
+WebLogic, Jboss provides two containers. Servlet container and EJB container.
+
+What is a container ?
+1. Provides XML parsing and processing capabilities.
+2. LifeCycle Management
+3. Create Objects
+
+Tomcat Server --> Servlet Container/
+1. Read XML
+2. Create instance of xml beans
+3. Manage LiceCycle of beans
+4. Dynamic parameters supply to beans (Servlets)
+
+What about IOC containers ?
+1. Read XML file data
+2. Create instances of POJOs
+3. Manage LifeCycle of POJOs
+4. Pass Dynamic parameters to POJO class. ( This is what is Dependency Injection Concept in Spring)
+ By using RuntimePolyMorphism they implemented DI.
+
+ Tomcat servlet container --> we can start and stop. Thereby starting and stopping the container.
+
+ How to do that for spring IOC containers ?
+
+IOC
+|- Core
+    - proc1 Class ->  BeanFactory (I) --> Implementation Class --> XMLBeanFactory (C)
+|- J2EE
+    - proc1 Class ->  ApplicationContext (I) --> ConfigurableApplicationContext (I) --> ClassPathXMLApplicationContext (C)
+MVC
+|- Web
+    - proc1 Class -> WebApplicationContext (I) --> WebApplicationContextUtils (Factory Class) --> internally create
+    class that implementes WebApplicationContext
+
+The xml is parsed using the SAX parser.
+
+what is DI ?
+passing required parameters from XML file to POJOs at runtime.
+
+Two ways of DI
+1. Setters
+2. Constructors

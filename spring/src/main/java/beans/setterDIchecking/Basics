@@ -1,0 +1,7 @@
+Dependency Checking
+1. To make setter DI mandatory
+2. dependency-check --> simple, objects, none, all
+
+//draw-backs
+@Required on setters
+RequiredAnnotationBeanPostProcessor Class instantiation is mandatory
